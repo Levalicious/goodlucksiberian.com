@@ -42,11 +42,11 @@ jobs:
 
       - name: Commit yarn.lock
         run: |
-          echo "${{ secrets.PGP_KEY }}" > private.key
+          echo "${{ secrets.DEPENDABOT_PGP_SECRET }}" > private.key
           gpg --import private.key
           git config user.name "Levalicious"
           git config user.email "levknoblock@gmail.com"
-          git config user.signingKey "${{ secrets.PGP_KEY_ID }}"
+          git config user.signingKey "${{ secrets.DEPENDABOT_PGP_PUBKEY }}"
           git config commit.gpgSign true
           git add yarn.lock
           git commit --allow-empty -m '[dependabot] Fix yarn.lock'
