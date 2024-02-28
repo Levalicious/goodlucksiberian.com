@@ -42,7 +42,9 @@ jobs:
 
       - name: Commit yarn.lock
         run: |
-          echo "${{ secrets.DEPENDABOT_PGP_SECRET }}" > private.key
+          cat > private.key << EOF
+          "${{ secrets.DEPENDABOT_PGP_SECRET }}"
+          EOF
           gpg --import private.key
           git config user.name "Levalicious"
           git config user.email "levknoblock@gmail.com"
