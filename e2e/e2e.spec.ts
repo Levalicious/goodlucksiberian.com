@@ -3,7 +3,7 @@ import { test, expect } from "@playwright/test";
 test("users can navigate to post page", async ({ page }) => {
   await page.goto("http://localhost:3000/");
 
-  await expect(page).toHaveTitle("simple-remix-blog");
+  await expect(page).toHaveTitle("goodlucksiberian.com");
 
   const postTitle = "Acheronta altoque";
   await expect(page.getByText(postTitle)).toBeVisible();
@@ -26,18 +26,18 @@ test("users can navigate to post page", async ({ page }) => {
     )
   ).toBeVisible();
 
-  await page.getByRole("link", { name: "Blog" }).click();
-  await expect(page).toHaveURL("http://localhost:3000/blog");
+  await page.getByRole("link", { name: "News" }).click();
+  await expect(page).toHaveURL("http://localhost:3000/news");
   await expect(page.getByText("All posts")).toBeVisible();
 });
 
 test("users can see the list of all posts", async ({ page }) => {
   await page.goto("http://localhost:3000/");
 
-  await expect(page).toHaveTitle("simple-remix-blog");
+  await expect(page).toHaveTitle("goodlucksiberian.com");
 
-  await page.getByRole("link", { name: "Blog" }).click();
-  await expect(page).toHaveURL("http://localhost:3000/blog");
+  await page.getByRole("link", { name: "News" }).click();
+  await expect(page).toHaveURL("http://localhost:3000/news");
   await expect(page.getByText("All posts")).toBeVisible();
   expect(await page.getByText("Read more").count()).toBe(4);
 });

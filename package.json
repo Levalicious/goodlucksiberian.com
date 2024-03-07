@@ -5,7 +5,8 @@
   "scripts": {
     "build": "npm run build:css && remix build",
     "build:css": "tailwindcss -o ./app/tailwind.css",
-    "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
+    "dev": "run-p dev:css dev:remix",
+    "dev:remix": "remix dev",
     "dev:css": "tailwindcss -o ./app/tailwind.css --watch",
     "start": "pm2 start",
     "stop": "pm2 delete all",
@@ -13,7 +14,8 @@
     "e2e": "playwright test",
     "lint": "eslint .",
     "test": "jest --config jest.config.ts",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc -b",
+    "ci": "run-p e2e lint test typecheck"
   },
   "husky": {
     "hooks": {
@@ -54,6 +56,7 @@
     "husky": "^8.0.1",
     "jest": "^29.3.0",
     "jest-environment-jsdom": "^29.3.0",
+    "npm-run-all": "^4.1.5",
     "pm2": "^5.3.1",
     "prettier": "^3.2.5",
     "pretty-quick": "^3.1.3",

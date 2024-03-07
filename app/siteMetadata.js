@@ -5,7 +5,7 @@ export const siteMetadata = {
   domain: "goodlucksiberian.com",
   url: "https://goodlucksiberian.com",
   image: "https://goodlucksiberian.com/images/banner.png",
-  client: "Natalia Knoblock",
+  client: "Good Luck Siberian",
   author: "Lev Knoblock",
   twitter: "",
   github: "",

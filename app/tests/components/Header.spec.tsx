@@ -50,8 +50,9 @@ describe("Header", () => {
     renderComponent();
 
     expect(screen.getByRole("link", { name: "News" })).toBeDefined();
-    expect(screen.getByRole("link", { name: "Tags" })).toBeDefined();
-    expect(screen.getByRole("link", { name: "About" })).toBeDefined();
+    expect(screen.getByRole("link", { name: "Cats" })).toBeDefined();
+    expect(screen.getByRole("link", { name: "Kittens" })).toBeDefined();
+    expect(screen.getByRole("link", { name: "Info" })).toBeDefined();
   });
 
   test("renders menu icon", () => {

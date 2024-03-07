@@ -10,8 +10,8 @@ describe("BlogLinks", () => {
 
     expect(screen.getAllByRole("link")).toHaveLength(4);
     expect(screen.getByText("News")).toBeDefined();
-    expect(screen.getByText("My Cats")).toBeDefined();
-    expect(screen.getByText("Tags")).toBeDefined();
-    expect(screen.getByText("About")).toBeDefined();
+    expect(screen.getByText("Cats")).toBeDefined();
+    expect(screen.getByText("Kittens")).toBeDefined();
+    expect(screen.getByText("Info")).toBeDefined();
   });
 });

@@ -3,8 +3,8 @@ import { siteMetadata } from "~/siteMetadata";
 import avatar from "../assets/avatar.webp";
 
 export const meta: MetaFunction = () => {
-  const title = `About - ${siteMetadata.client}`;
-  const summary = `About me - ${siteMetadata.client}`;
+  const title = `Info - ${siteMetadata.client}`;
+  const summary = `Info - ${siteMetadata.client}`;
 
   return {
     title: title,
@@ -16,7 +16,7 @@ export const meta: MetaFunction = () => {
   };
 };
 
-export default function About() {
+export default function Info() {
   return (
     <div className="flex flex-col justify-center items-center mb-auto">
       <div className="w-48 h-48 sm:w-64 sm:h-64 not-prose sm:mb-8">
