@@ -3250,10 +3250,10 @@
     ws "^7.4.5"
     xdm "^2.0.0"
 
-"@remix-run/eslint-config@^2.7.2":
-  version "2.7.2"
-  resolved "https://registry.yarnpkg.com/@remix-run/eslint-config/-/eslint-config-2.7.2.tgz#b08d666b0c468e5c3fb37ee683aa2cb67c6563ff"
-  integrity sha512-fAXNlRQQ4DJ0g6GCkUM3sWji18+4i/+FtMA1roSfB9s/+8NEpdZLYJbLo/NGlZUHDC7dXAmTZ3kUZcCCBdOAKw==
+"@remix-run/eslint-config@^2.16.8":
+  version "2.16.8"
+  resolved "https://registry.yarnpkg.com/@remix-run/eslint-config/-/eslint-config-2.16.8.tgz#38351afcb9eac7cb2a06e5e47659cd72c4d3d13b"
+  integrity sha512-vtYBv485ijnaVoU/m1vNB3oKofvCKSpoHJ1rQdNHXUbJlpdaTaGDTlnCjgFAssgiu2GQl7a5etySqXVZgfpjPw==
   dependencies:
     "@babel/core" "^7.21.8"
     "@babel/eslint-parser" "^7.21.8"
